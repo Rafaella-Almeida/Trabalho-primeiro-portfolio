@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav {
+  height: 80px;
+  background: rgb(218, 96, 136);
+}
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  position: relative;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: rgb(243, 231, 235);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 26px;
+}
