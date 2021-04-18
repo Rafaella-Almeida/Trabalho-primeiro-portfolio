@@ -4,6 +4,10 @@
   list-style: none;
   text-decoration: none;
 }
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
 
 .container-principal {
   width: 100%;
@@ -23,10 +27,92 @@
 }
 
 a {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgb(141, 72, 94);
+  border-radius: 2px;
+  padding: 15px;
+  cursor: pointer;
   color: white;
+  border: none;
+  font-size: 16px;
 }
 
 a:hover {
   color: black;
+}
+
+h3 {
+  color: rgb(56, 54, 54);
+  display: flex;
+  margin: auto;
+}
+
+.nome {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 350px;
+}
+
+.title {
+  height: 80px;
+  width: 50%;
+}
+
+.container-informacoes {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-position-informacoes {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .imagem {
+  display: flex;
+  align-items: flex-end;
+} */
+
+img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.container-paragrafo {
+  width: 200vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.paragrafo {
+  height: 100px;
+  display: inline;
+  justify-content: center;
+  width: 50%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  cursor: pointer;
+  color: palevioletred;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h1 {
+  display: flex;
+  margin: auto;
+}
+.container-button {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
 }
