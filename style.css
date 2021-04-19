@@ -78,11 +78,6 @@ h3 {
   justify-content: space-between;
 }
 
-/* .imagem {
-  display: flex;
-  align-items: flex-end;
-} */
-
 .foto-rafa {
   width: 300px;
   height: 300px;
@@ -98,7 +93,7 @@ h3 {
 
 .paragrafo {
   height: 100px;
-  display: inline;
+  display: flex;
   justify-content: center;
   width: 50%;
   font-size: 20px;
@@ -129,24 +124,17 @@ h1 {
   display: flex;
   justify-content: center;
 }
-.coitainer-textos {
+.container-textos {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .container-texto {
-  height: 100px;
-  display: inline;
-  justify-content: center;
-  width: 100%;
-  font-size: 20px;
-  font-weight: bold;
+  width: 840px;
 }
 .texto {
   font-size: 18px;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
 }
 .container-subetitle {
   width: 100%;
@@ -189,4 +177,22 @@ img {
   width: 80%;
   display: flex;
   justify-content: center;
+}
+
+.link-dois {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.container-redes-sociais {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.imagens-minhas-redes {
+  display: flex;
+  flex-direction: column;
 }
