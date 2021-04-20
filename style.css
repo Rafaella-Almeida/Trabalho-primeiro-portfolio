@@ -7,6 +7,7 @@
 body {
   background-color: rgb(241, 219, 235);
   font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
 }
 
 .container-principal {
@@ -14,7 +15,7 @@ body {
   height: 80px;
   background: rosybrown;
 }
-.container-menu {
+.position-menu {
   display: flex;
   justify-content: center;
 }
@@ -25,7 +26,6 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-
 .menu-principal {
   background: rgb(141, 72, 94);
   border-radius: 2px;
@@ -40,31 +40,16 @@ a:hover {
   color: black;
 }
 
-h3 {
-  color: rgb(56, 54, 54);
+.container-nome {
   display: flex;
-  margin: auto;
-}
-
-.nome {
-  display: flex;
-  justify-content: center;
+  text-align: end;
   height: 80px;
   width: 350px;
 }
-.button-principal {
-  background: rgb(141, 72, 94);
-  border-radius: 2px;
-  padding: 15px;
-  cursor: pointer;
-  color: white;
-  border: none;
-  font-size: 16px;
-}
-
-.title {
-  height: 80px;
-  width: 50%;
+.nome {
+  color: rgb(56, 54, 54);
+  display: flex;
+  margin: auto;
 }
 
 .container-informacoes {
@@ -72,7 +57,7 @@ h3 {
   display: flex;
   justify-content: center;
 }
-.container-position-informacoes {
+.position-informacoes {
   width: 800px;
   display: flex;
   justify-content: space-between;
@@ -84,30 +69,42 @@ h3 {
   border-radius: 50%;
   object-fit: cover;
 }
+.title {
+  height: 80px;
+  width: 50%;
+}
 
 .container-paragrafo {
-  width: 200vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
-
 .paragrafo {
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
+.container-button {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.borda-button {
+  background: rgb(141, 72, 94);
+  border-radius: 40px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 10px;
+}
 .button {
   background: white;
-  border-radius: 6px;
-  padding: 15px;
+  border-radius: 20px;
+  padding: 14px;
   cursor: pointer;
   color: palevioletred;
   border: none;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
 }
 
@@ -115,45 +112,49 @@ h1 {
   display: flex;
   margin: auto;
 }
-.container-button {
-  width: 80%;
-  display: flex;
-  justify-content: flex-end;
-}
+
 .container-titulo {
-  display: flex;
-  justify-content: center;
+  width: 100%;
 }
+.position-titulo {
+  width: 100%;
+  display: flex;
+  text-align: center;
+}
+
 .container-textos {
   width: 100%;
   display: flex;
-  justify-content: center;
 }
-.container-texto {
-  width: 840px;
+.position-texto {
+  width: 100%;
+  text-align: center;
 }
 .texto {
   font-size: 18px;
   font-weight: bold;
 }
-.container-subetitle {
-  width: 100%;
-}
-.subtitle {
-  display: flex;
-  justify-content: center;
-}
-.container-img-sites {
+
+.container-subtitle {
   width: 100%;
   display: flex;
-  justify-content: center;
+}
+.position-subtitle {
+  width: 100%;
+  text-align: center;
 }
 
-.imagens-sites {
+.container-imagens-sites {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.position-imagens-sites {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
 }
+
 img {
   width: 200px;
   height: 200px;
@@ -161,38 +162,73 @@ img {
   object-fit: cover;
 }
 
-.container-texto-img-final {
+.container-texto-imagem-curso {
+  width: 100%;
+  display: flex;
+}
+.texto-curso {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+.position-imagem-curso {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-
-.container-img-curso {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
 .imagem-curso {
   width: 80%;
   display: flex;
   justify-content: center;
 }
 
-.link-dois {
+.titulo-final {
+  display: flex;
+  text-align: center;
+}
+
+.container-redes-sociais {
+  width: 100%;
+}
+
+.imagens-redes-sociais {
+  display: flex;
+  flex-direction: column;
+}
+.link-contatos {
   width: 90px;
   height: 90px;
   border-radius: 100%;
   object-fit: cover;
 }
 
-.container-redes-sociais {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-}
+@media (max-width: 760px) {
+  .position menu {
+    width: 100%;
+  }
 
-.imagens-minhas-redes {
-  display: flex;
-  flex-direction: column;
+  .position-informacoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    width: 100%;
+  }
+
+  .imagem {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-paragrafo {
+    width: 100vh;
+  }
+  .container-button {
+    width: 80%;
+    min-height: 260px;
+    max-height: 600px;
+    display: flex;
+    align-items: flex-end;
+  }
 }
