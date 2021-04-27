@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+//  ELEMENTOS
+
+a:hover {
+  color: black;
+}
+
+h1 {
+  display: flex;
+  margin: auto;
+}
+
+p {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+//  mixins
+
+@mixin posicao-linha($exibicao, $posicionamento-principal) {
+  display: $exibicao;
+  justify-content: $posicionamento-principal;
+}
+@mixin tamanho-elemento($largura, $altura) {
+  width: $largura;
+  height: $altura;
+}
+@mixin tamanho-posicionamanto($largura, $posicao) {
+  width: $largura;
+  display: $posicao;
+}
+@mixin posicionamento-center($flexibilidade, $posicionamento) {
+  display: $flexibilidade;
+  text-align: $posicionamento;
+}
+
+body {
+  background-color: rgb(241, 219, 235);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  width: 100%;
+
+  //   PAGINA INDEX.HTML
+
+  .container-principal {
+    @include tamanho-elemento(100%, 80px);
+    background: rosybrown;
+  }
+
+  .position-menu {
+    @include posicao-linha(flex, center);
+  }
+
+  .menu {
+    @include posicao-linha(flex, space-around);
+    @include tamanho-elemento(300px, 80px);
+    align-items: center;
+  }
+
+  .menu-principal {
+    background: rgb(141, 72, 94);
+    border-radius: 2px;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-size: 16px;
+  }
+  .container-nome {
+    @include tamanho-elemento(350px, 80px);
+    @include posicionamento-center(flex, end);
+
+    .nome {
+      color: rgb(56, 54, 54);
+      display: flex;
+      margin: auto;
+    }
+  }
+
+  .container-informacoes {
+    width: 100%;
+    @include posicao-linha(flex, center);
+
+    .position-informacoes {
+      width: 800px;
+      @include posicao-linha(flex, space-between);
+
+      .foto-rafa {
+        @include tamanho-elemento(300px, 300px);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .title {
+        @include tamanho-elemento(50%, 80px);
+
+        .container-paragrafo {
+          width: 100%;
+          @include posicao-linha(flex, space-between);
+
+          .paragrafo {
+            font-size: 18px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .container-button {
+    width: 80%;
+    @include posicao-linha(flex, flex-end);
+
+    .borda-button {
+      background: rgb(141, 72, 94);
+      border-radius: 40px;
+      padding: 10px;
+      cursor: pointer;
+      border: none;
+      font-size: 10px;
+
+      .button {
+        background: white;
+        border-radius: 20px;
+        padding: 14px;
+        cursor: pointer;
+        color: palevioletred;
+        border: none;
+        font-size: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // PAGINA SOBRE.HTML
+
+  .container-titulo {
+    width: 100%;
+
+    .position-titulo {
+      width: 100%;
+      @include posicionamento-center(flex, center);
+    }
+  }
+
+  .container-textos {
+    @include tamanho-posicionamanto(100%, flex);
+
+    .position-texto {
+      width: 100%;
+      text-align: center;
+
+      .texto {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+  .container-subtitle {
+    @include tamanho-posicionamanto(100%, flex);
+
+    .position-subtitle {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .container-imagens-sites {
+    width: 100%;
+    @include posicao-linha(flex, center);
+
+    .position-imagens-sites {
+      width: 80%;
+      @include posicao-linha(flex, space-evenly);
+
+      img {
+        @include tamanho-elemento(200px, 200px);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+  .container-texto-imagem-curso {
+    @include tamanho-posicionamanto(100%, flex);
+
+    .texto-curso {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .position-imagem-curso {
+    width: 100%;
+    @include posicao-linha(flex, center);
+
+    .imagem-curso {
+      width: 80%;
+      @include posicao-linha(flex, center);
+
+      img {
+        @include tamanho-elemento(200px, 200px);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  //  PAGINA CONTATO.HTML
+
+  .titulo-final {
+    @include posicionamento-center(flex, center);
+  }
+
+  .container-redes-sociais {
+    width: 100%;
+
+    .imagens-redes-sociais {
+      display: flex;
+      flex-direction: column;
+
+      .link-contatos {
+        @include tamanho-elemento(90px, 90px);
+        border-radius: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

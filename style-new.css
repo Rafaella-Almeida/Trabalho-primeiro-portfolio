@@ -4,30 +4,46 @@
   list-style: none;
   text-decoration: none;
 }
+
+a:hover {
+  color: black;
+}
+
+h1 {
+  display: flex;
+  margin: auto;
+}
+
+p {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 body {
-  background-color: rgb(241, 219, 235);
+  background-color: #f1dbeb;
   font-family: Georgia, "Times New Roman", Times, serif;
   width: 100%;
 }
-
-.container-principal {
+body .container-principal {
   width: 100%;
   height: 80px;
   background: rosybrown;
 }
-.position-menu {
+body .position-menu {
   display: flex;
   justify-content: center;
 }
-.menu {
+body .menu {
   display: flex;
+  justify-content: space-around;
   width: 300px;
   height: 80px;
-  justify-content: space-around;
   align-items: center;
 }
-.menu-principal {
-  background: rgb(141, 72, 94);
+body .menu-principal {
+  background: #8d485e;
   border-radius: 2px;
   padding: 15px;
   cursor: pointer;
@@ -35,69 +51,60 @@ body {
   border: none;
   font-size: 16px;
 }
-
-a:hover {
-  color: black;
-}
-
-.container-nome {
+body .container-nome {
+  width: 350px;
+  height: 80px;
   display: flex;
   text-align: end;
-  height: 80px;
-  width: 350px;
 }
-.nome {
-  color: rgb(56, 54, 54);
+body .container-nome .nome {
+  color: #383636;
   display: flex;
   margin: auto;
 }
-
-.container-informacoes {
+body .container-informacoes {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.position-informacoes {
+body .container-informacoes .position-informacoes {
   width: 800px;
   display: flex;
   justify-content: space-between;
 }
-
-.foto-rafa {
+body .container-informacoes .position-informacoes .foto-rafa {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
 }
-.title {
-  height: 80px;
+body .container-informacoes .position-informacoes .title {
   width: 50%;
+  height: 80px;
 }
-
-.container-paragrafo {
+body .container-informacoes .position-informacoes .title .container-paragrafo {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.paragrafo {
+body .container-informacoes .position-informacoes .title .container-paragrafo .paragrafo {
   font-size: 18px;
   font-weight: bold;
 }
-
-.container-button {
+body .container-button {
   width: 80%;
   display: flex;
   justify-content: flex-end;
 }
-.borda-button {
-  background: rgb(141, 72, 94);
+body .container-button .borda-button {
+  background: #8d485e;
   border-radius: 40px;
   padding: 10px;
   cursor: pointer;
   border: none;
   font-size: 10px;
 }
-.button {
+body .container-button .borda-button .button {
   background: white;
   border-radius: 20px;
   padding: 14px;
@@ -107,128 +114,91 @@ a:hover {
   font-size: 10px;
   font-weight: bold;
 }
-
-h1 {
-  display: flex;
-  margin: auto;
-}
-
-.container-titulo {
+body .container-titulo {
   width: 100%;
 }
-.position-titulo {
+body .container-titulo .position-titulo {
   width: 100%;
   display: flex;
   text-align: center;
 }
-
-.container-textos {
+body .container-textos {
   width: 100%;
   display: flex;
 }
-.position-texto {
+body .container-textos .position-texto {
   width: 100%;
   text-align: center;
 }
-.texto {
+body .container-textos .position-texto .texto {
   font-size: 18px;
   font-weight: bold;
 }
-
-.container-subtitle {
+body .container-subtitle {
   width: 100%;
   display: flex;
 }
-.position-subtitle {
+body .container-subtitle .position-subtitle {
   width: 100%;
   text-align: center;
 }
-
-.container-imagens-sites {
+body .container-imagens-sites {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.position-imagens-sites {
+body .container-imagens-sites .position-imagens-sites {
   width: 80%;
   display: flex;
   justify-content: space-evenly;
 }
-
-img {
+body .container-imagens-sites .position-imagens-sites img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
 }
-
-.container-texto-imagem-curso {
+body .container-texto-imagem-curso {
   width: 100%;
   display: flex;
 }
-.texto-curso {
+body .container-texto-imagem-curso .texto-curso {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
 }
-.position-imagem-curso {
+body .position-imagem-curso {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.imagem-curso {
+body .position-imagem-curso .imagem-curso {
   width: 80%;
   display: flex;
   justify-content: center;
 }
-
-.titulo-final {
+body .position-imagem-curso .imagem-curso img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+body .titulo-final {
   display: flex;
   text-align: center;
 }
-
-.container-redes-sociais {
+body .container-redes-sociais {
   width: 100%;
 }
-
-.imagens-redes-sociais {
+body .container-redes-sociais .imagens-redes-sociais {
   display: flex;
   flex-direction: column;
 }
-.link-contatos {
+body .container-redes-sociais .imagens-redes-sociais .link-contatos {
   width: 90px;
   height: 90px;
   border-radius: 100%;
   object-fit: cover;
 }
 
-@media (max-width: 760px) {
-  .position menu {
-    width: 100%;
-  }
-
-  .position-informacoes {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .title {
-    width: 100%;
-  }
-
-  .imagem {
-    display: flex;
-    justify-content: center;
-  }
-
-  .container-paragrafo {
-    width: 100%;
-  }
-  .container-button {
-    width: 80%;
-    min-height: 260px;
-    max-height: 600px;
-    display: flex;
-    align-items: flex-end;
-  }
-}
+/*# sourceMappingURL=style-new.css.map */
